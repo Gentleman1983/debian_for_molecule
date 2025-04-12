@@ -35,15 +35,15 @@ jobs:
       with:
         images: ${{ env.IMAGE_NAME }}
         build-args: |
-          VERSION: ${{ matrix.version }}
+          VERSION=${{ matrix.version }}
 
     - name: Build and push
       uses: docker/build-push-action@v6
       with:
-        build-args: |
-          VERSION: ${{ matrix.version }}
         sbom: true
         push: true
         provenance: mode=max
+        build-args: |
+          VERSION=${{ matrix.version }}
         tags: |
           gentleman1983/ansible_molecule_debian:${{ matrix.version }}
