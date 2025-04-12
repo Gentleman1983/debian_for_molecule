@@ -1,2 +1,3 @@
-# debian_for_molecule
-Debian Docker Images for Ansible Molecule
+# Debian Images for Ansible Molecule
+
+Provides a minimal debian docker image which can be used with ansible molecule tests and should provide most packages needed for builtin ansible modules.
