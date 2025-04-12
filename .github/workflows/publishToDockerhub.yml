@@ -32,16 +32,14 @@ jobs:
     - name: Extract metadata
       id: meta
       uses: docker/metadata-action@v5
-      env:
-        VERSION: ${{ matrix.version }}
       with:
         images: ${{ env.IMAGE_NAME }}
+        VERSION: ${{ matrix.version }}
 
     - name: Build and push
       uses: docker/build-push-action@v6
-      env:
-        VERSION: ${{ matrix.version }}
       with:
+        VERSION: ${{ matrix.version }}
         sbom: true
         push: true
         provenance: mode=max
