@@ -34,12 +34,14 @@ jobs:
       uses: docker/metadata-action@v5
       with:
         images: ${{ env.IMAGE_NAME }}
-        VERSION: ${{ matrix.version }}
+        build-args: |
+          VERSION: ${{ matrix.version }}
 
     - name: Build and push
       uses: docker/build-push-action@v6
       with:
-        VERSION: ${{ matrix.version }}
+        build-args: |
+          VERSION: ${{ matrix.version }}
         sbom: true
         push: true
         provenance: mode=max
