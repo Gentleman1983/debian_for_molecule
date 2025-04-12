@@ -1,8 +1,8 @@
 name: Build and publish a Docker image
 
-on: [push]
-  #schedule:
-  #- cron: "0 0 * * 0"
+on:
+  schedule:
+  - cron: "0 0 * * 0"
 
 env:
   IMAGE_NAME: gentleman1983/ansible_molecule_debian
