@@ -2,7 +2,7 @@ name: Build and publish a Docker image
 
 on:
   schedule:
-  - cron: "0 0 * * 0"
+    - cron: "0 0 * * 0"
 
 env:
   IMAGE_NAME: gentleman1983/ansible_molecule_debian
@@ -47,4 +47,5 @@ jobs:
           VERSION=${{ matrix.version }}
         tags: |
           gentleman1983/ansible_molecule_debian:${{ matrix.version }}
+
 
