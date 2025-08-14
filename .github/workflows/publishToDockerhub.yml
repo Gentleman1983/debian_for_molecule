@@ -11,7 +11,7 @@ jobs:
   docker:
     strategy:
       matrix:
-        version: [ 11, 12 ]
+        version: [ 11, 12, 13 ]
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -47,3 +47,4 @@ jobs:
           VERSION=${{ matrix.version }}
         tags: |
           gentleman1983/ansible_molecule_debian:${{ matrix.version }}
+
