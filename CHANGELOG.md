@@ -1,6 +1,10 @@
 # Changelog
 This file shows the changes over time on this repository.
 
+## Version ?
+* Update actions/checkout action to v6
+* Update docker/setup-qemu-action action to v4
+
 ## Version 1.2.0
 * Increase schedule to daily build.
 
@@ -14,6 +18,7 @@ This file shows the changes over time on this repository.
 ## Version 1.0.0
 * Initial release.
 * Publish debian 11 & 12 image every monday morning.
+
 
 
 
